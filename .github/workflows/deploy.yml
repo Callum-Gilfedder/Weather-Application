@@ -24,7 +24,7 @@ jobs:
 
   
       - name: Set working directory
-        run: cd ${{ github.workspace }}/Weather-Application
+        run: cd ${{ github.workspace }}
 
 
       - name: Navigate to App Directory
