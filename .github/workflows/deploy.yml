@@ -16,6 +16,9 @@ jobs:
 
       - name: Checkout Repository
         uses: actions/checkout@v2
+      
+      - name: Set working directory
+        run: cd ${{ github.workspace }}
 
       - name: Set Up Node.js
         uses: actions/setup-node@v2
@@ -23,8 +26,7 @@ jobs:
           node-version: 14  
 
   
-      - name: Set working directory
-        run: cd ${{ github.workspace }}
+
 
 
       - name: Navigate to App Directory
