@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Set working directory
-        run: cd ${{ github.workspace }}
+        run: Run cd /home/runner/work/Weather-Application
 
       - name: Set Up Node.js
         uses: actions/setup-node@v2
