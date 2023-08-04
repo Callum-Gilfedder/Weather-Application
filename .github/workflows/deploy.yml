@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Navigate to App Directory
+        run: cd weather-app
+
       - name: Checkout Repository
         uses: actions/checkout@v2
 
@@ -18,8 +21,7 @@ jobs:
         with:
           node-version: 14  
         
-      - name: Navigate to App Directory
-        run: cd weather-app
+
         # Think this automatically detects dependencies from the package.json file
       - name: Install Dependencies
         run: npm install
