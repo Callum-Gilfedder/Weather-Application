@@ -7,7 +7,7 @@ function WeatherApp() {
   const [todaysWeatherData, setTodaysWeatherData] = useState(null) 
   const [tomorrowsWeatherData, setTomorrowsWeatherData] = useState(null) 
   const [dayAfterTomorrowsWeatherData, setDayAfterTomorrowsWeather] = useState(null)
-
+  // Using two states for this might be not the cleanest way to update state without triggering useEffect?
   const [userLocationInput, setUserLocationInput] = useState("");
   const [location, setLocation] = useState("")
 
