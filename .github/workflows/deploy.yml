@@ -23,6 +23,9 @@ jobs:
           node-version: 14  
 
   
+      - name: Set working directory
+        run: cd ${{ github.workspace }}/Weather-Application
+
 
       - name: Navigate to App Directory
         run: cd weather-app && ls -la
