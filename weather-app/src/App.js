@@ -14,11 +14,12 @@ function WeatherApp() {
 
   useEffect(() => {
     // Define the API URL
-    const apiUrl = 'https://wttr.in/?format=j1' + location;
-
+    const apiUrl = 'https://wttr.in/' + location + '?format=j1';
+    console.log("Triggered")
     // Fetch weather data using Axios
     axios.get(apiUrl)
       .then(response => {
+        console.log(apiUrl)
         setResponseData(response.data)
         const extractedData = extractWeatherData(response.data);
         setCurrentWeatherData(extractedData.currentWeather);
@@ -33,9 +34,8 @@ function WeatherApp() {
 
   console.log(responseData)
 
-  function handleSubmit(event) {
+  function handleClick(event) {
     setLocation(userLocationInput)
-    console.log(location)
   }
 
   function handleChange(event) {
@@ -167,7 +167,7 @@ function WeatherApp() {
       <h1>Weather Data</h1>
       <input type="text" onChange={handleChange}></input>
       <h1>User input: {userLocationInput}</h1>
-      <button onSubmit={handleSubmit}>Submit</button>
+      <button onClick={handleClick}>Search</button>
       {/* Display simplified weather data */}
       {currentWeatherData && (
         <div>
