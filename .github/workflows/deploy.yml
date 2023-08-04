@@ -17,7 +17,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14  
-
+        
+      - name: Navigate to App Directory
+        run: cd weather-app
         # Think this automatically detects dependencies from the package.json file
       - name: Install Dependencies
         run: npm install
