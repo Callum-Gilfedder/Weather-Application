@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Set working directory
-        run: Run cd /home/runner/work/Weather-Application
+        run: cd /home/runner/work/Weather-Application
 
       - name: Set Up Node.js
         uses: actions/setup-node@v2
