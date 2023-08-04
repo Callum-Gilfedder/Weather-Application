@@ -25,7 +25,7 @@ jobs:
   
 
       - name: Navigate to App Directory
-        run: cd weather-app && ls
+        run: cd weather-app && ls -la
 
         # Think this automatically detects dependencies from the package.json file
       - name: Install Dependencies
