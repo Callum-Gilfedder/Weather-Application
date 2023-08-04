@@ -1,0 +1,33 @@
+name: Build and Deploy React App
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14  
+
+        # Think this automatically detects dependencies from the package.json file
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build React App
+        run: npm run build
+
+            
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4 
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
