@@ -22,12 +22,10 @@ jobs:
         with:
           node-version: 14  
 
-      - name: Navigate away from weather-application
-        run: cd ..
   
 
       - name: Navigate to App Directory
-        run: cd weather-app
+        run: cd weather-app && ls
 
         # Think this automatically detects dependencies from the package.json file
       - name: Install Dependencies
