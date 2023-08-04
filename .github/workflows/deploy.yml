@@ -19,9 +19,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14  
-        
-      - name: Navigate 
-        run: cd weather-application
 
       - name: Navigate to App Directory
         run: cd weather-app
